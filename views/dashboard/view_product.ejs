@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12"><%- include("./header.ejs") %></div>
+
+    <div class="col-lg-3"><%- include("./left.ejs") %></div>
+
+    <div class="col-lg-9 border border-danger">
+     <% if(data.length>0) { %>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>product</th>
+            <th>desc</th>
+            <th>price</th>
+          </tr>
+        </thead>
+        <tbody>
+         <% for(var i=0;i<data.length; i++) { %>
+          <tr>
+            <td>
+              <%= data[i].product %>
+            </td>
+            <td>
+              <%= data[i].desc %>
+            </td>
+            <td>
+              <%= data[i].price %>
+            </td>
+            <td>
+              <a href = "/delete1/<%= data[i]._id %>">Delete</a> </td>
+          </tr>
+          <% } %>
+        </tbody>
+       
+      </table>
+      <% }    else { %>
+        No record Found
+        <% } %>
+    </div>
+
+
+  </div>
+</div>

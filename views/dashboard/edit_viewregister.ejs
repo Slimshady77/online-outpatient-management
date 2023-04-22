@@ -1,0 +1,49 @@
+<%- include("./header.ejs") %>
+
+<div class="container text-center">
+    <div class="row">
+      <div class="col-lg-4 border border-danger">
+<%- include("./left.ejs") %>
+      </div>
+      <div class="col-lg-8 border border-danger">
+
+
+
+      <form method="post" action="/edit_form/<%= data._id %>">
+
+        <div class="mb-3">
+          <label for="exampleInputtext" class="form-label" >First name</label>
+          <input type="text" class="form-control" name="fname" value="<%= data.fname %>">
+
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputtext" class="form-label" >Last name</label>
+          <input type="text" class="form-control" name="lname" value="<%= data.lname %>">
+
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputtext" class="form-label" >Mobile number</label>
+          <input type="number" class="form-control" name="mob" value="<%= data.mob %>" >
+
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label" >Email address</label>
+          <input type="email" class="form-control" name="email" value=" <%= data.email %>">
+          
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label" >Password</label>
+          <input type="text" class="form-control"  name="pass" value="<%= data.pass %>">
+        </div>
+       
+        <button type="submit" class="btn btn-primary">Update</button>
+        
+       
+           
+
+                
+      </form>
+      
+    </div>

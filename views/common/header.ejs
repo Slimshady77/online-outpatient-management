@@ -1,0 +1,184 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="logo.png"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="product" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Products
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="products">Seeds</a></li>
+            <li><a class="dropdown-item" href="fertilizer">Fertilizers</a></li>
+            <li><a class="dropdown-item" href="#">Incentisides</a></li>
+            <li><a class="dropdown-item" href="#">Machinery</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Nutritions</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="gallery">Gallery</a>
+        </li>
+      </ul>
+
+
+
+      <!-- Sign up Modal -->
+
+      <!-- Modal -->
+
+      <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Sign Up</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <!-- FORM STARTS -->
+              <div class="container">
+                <div class="row">
+
+                  <form method="post" action="/signup">
+
+                    <div class="mb-3">
+                      <label for="exampleInputtext" class="form-label" >First name</label>
+                      <input type="text" class="form-control" name="fname" >
+
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="exampleInputtext" class="form-label" >Last name</label>
+                      <input type="text" class="form-control" name="lname">
+
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="exampleInputtext" class="form-label" >Mobile number</label>
+                      <input type="number" class="form-control" name="mob" >
+
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label" >Email address</label>
+                      <input type="email" class="form-control" name="email" >
+                      <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label" >Password</label>
+                      <input type="text" class="form-control" id="exampleInputPassword1" name="pass">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label" >Confirm Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" name="cpass">
+                    </div>
+
+
+                    <!-- <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div> -->
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- FORM ENDS -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+
+          </div>
+        </div>
+      </div>
+      <!-- Sign up modal ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- Sign in Modal -->
+
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Sign in
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Sign In</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <!-- FORM STARTS -->
+              <div class="container">
+                <div class="row">
+                  <form method="post" action="/login">
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" name="email">
+                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" name="pass">
+                    </div>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                </div>
+              </div>
+              <!-- FORM ENDS -->
+            </div>
+            <!-- Button trigger modal -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+                Sign up
+              </button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Sign in modal ends -->
+
+      <form class="d-flex ms-4 " role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>

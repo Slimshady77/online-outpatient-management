@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-lg-12">
+      <%- include("./header.ejs") %>
+    </div>
+    
+    <div class="col-lg-3">
+      <%- include("./left.ejs") %>
+    </div> 
+
+
+    
+    <div class="col-lg-9">
+  <% if(data.length>0){ %>
+      <table class="table table-bordered">
+        <tr>
+          <th>index</th>
+          <th>fname</th>
+          <th>lname</th>
+          <th>mob</th>
+          <th>email</th>
+          <th>pass</th>
+          <th>cpass</th>
+          <th>action</th>
+        </tr>
+        
+        <% for(var i=0; i<data.length; i++) { %>
+          <tr>
+            <td><%= i %></td>
+            <td><%= data[i].fname %></td>
+            <td><%= data[i].lname %></td>
+            <td><%= data[i].mob %></td>
+            <td><%= data[i].email %></td>
+            <td><%= data[i].pass %></td>
+            <td><%= data[i].cpass %></td>
+            <td><a href = "/delete/<%= data[i]._id %>">Delete</a>  
+              <td><a href = "/edit/<%= data[i]._id %>">Edit</a>           
+            </td>
+          </tr>
+        <%} %>
+        
+      </table>
+    <% } else { %>
+      NO records found
+
+     <% } %>
+    </div>
+
+   </div>
+</div>
